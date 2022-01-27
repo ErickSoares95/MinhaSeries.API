@@ -10,16 +10,16 @@ using System.Threading.Tasks;
 
 namespace MinhaSeries.Application.Queries.GetSeriesByIdQuery
 {
-    public class GetSeriesByIdQueryHandler : IRequestHandler<GetSeriesByIdQuery, SerieDetailsViewModel>
+    public class GetSerieByIdQueryHandler : IRequestHandler<GetSerieByIdQuery, SerieDetailsViewModel>
     {
         private readonly ISerieRepository _serieRepository;
 
-        public GetSeriesByIdQueryHandler(ISerieRepository serieRepository)
+        public GetSerieByIdQueryHandler(ISerieRepository serieRepository)
         {
             _serieRepository = serieRepository;
         }
 
-        public async Task<SerieDetailsViewModel> Handle(GetSeriesByIdQuery request, CancellationToken cancellationToken)
+        public async Task<SerieDetailsViewModel> Handle(GetSerieByIdQuery request, CancellationToken cancellationToken)
         {
             var serie = await _serieRepository.GetByIdAsync(request.Id);
 

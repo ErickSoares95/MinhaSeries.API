@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace MinhaSeries.Application.Queries.GetSeriesByIdQuery
 {
-    public class GetSeriesByIdQuery : IRequest<SerieDetailsViewModel>
+    public class GetSerieByIdQuery : IRequest<SerieDetailsViewModel>
     {
-        public GetSeriesByIdQuery(int id)
+        public GetSerieByIdQuery(int id)
         {
             Id = id;
         }

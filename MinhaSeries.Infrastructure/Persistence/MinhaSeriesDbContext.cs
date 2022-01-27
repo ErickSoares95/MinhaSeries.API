@@ -7,7 +7,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MinhaSeries.Infrastructure
+namespace MinhaSeries.Infrastructure.Persistence
 {
     public class MinhaSeriesDbContext : DbContext
     {

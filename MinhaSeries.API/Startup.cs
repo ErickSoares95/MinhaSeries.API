@@ -1,12 +1,21 @@
+using FluentValidation.AspNetCore;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using MinhaSeries.API.Filters;
+using MinhaSeries.Application.Commands.CreateSerie;
+using MinhaSeries.Application.Validators;
+using MinhaSeries.Core.Repositories;
+using MinhaSeries.Infrastructure.Persistence;
+using MinhaSeries.Infrastructure.Persistence.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,14 +36,16 @@ namespace MinhaSeries.API
         public void ConfigureServices(IServiceCollection services)
         {
 
-            var connectionString = Configuration.GetConnectionString("MinhaSeries");
+            var connectionString = Configuration.GetConnectionString("MinhaSeriesCs");
             services.AddDbContext<MinhaSeriesDbContext>(options => options.UseSqlServer(connectionString));
 
-            //services.AddControllers(options => options.Filters.Add(typeof(ValidationFilter)))
-            //    .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateUserCommandValidator>());
+            services.AddScoped<ISerieRepository, SerieRepository>();
+
+            services.AddControllers(options => options.Filters.Add(typeof(ValidationFilter)))
+                .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateSerieCommandValidator>());
 
 
-            //services.AddMediatR(typeof(CreateSerieCommand));
+            services.AddMediatR(typeof(CreateSerieCommand));
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
