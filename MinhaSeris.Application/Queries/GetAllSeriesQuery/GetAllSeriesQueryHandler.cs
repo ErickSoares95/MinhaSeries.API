@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace MinhaSeries.Application.Queries.GetAllSeriesQuery
 {
-    class GetAllSeriesQueryHandler : IRequestHandler<GetAllSeriesQuery, List<SerieViewModel>>
+    public class GetAllSeriesQueryHandler : IRequestHandler<GetAllSeriesQuery, List<SerieViewModel>>
     {
         public readonly ISerieRepository _serieRepository;
 

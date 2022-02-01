@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinhaSeries.API", "MinhaSeries.API\MinhaSeries.API.csproj", "{B6987747-AD97-4DB3-9AB5-E560FD0EE9DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinhaSeries.API", "MinhaSeries.API\MinhaSeries.API.csproj", "{B6987747-AD97-4DB3-9AB5-E560FD0EE9DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinhaSeries.Core", "MinhaSeries.Core\MinhaSeries.Core.csproj", "{17D87DE9-F4E6-4E54-BF01-32EEBBDC8ADD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinhaSeries.Core", "MinhaSeries.Core\MinhaSeries.Core.csproj", "{17D87DE9-F4E6-4E54-BF01-32EEBBDC8ADD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinhaSeries.Infrastructure", "MinhaSeries.Infrastructure\MinhaSeries.Infrastructure.csproj", "{E9986150-1F22-4FC5-A8E1-2747EE45C611}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinhaSeries.Infrastructure", "MinhaSeries.Infrastructure\MinhaSeries.Infrastructure.csproj", "{E9986150-1F22-4FC5-A8E1-2747EE45C611}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinhaSeries.Application", "MinhaSeris.Application\MinhaSeries.Application.csproj", "{AC09AABC-D25E-405B-9C17-5462EB3362F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinhaSeries.Application", "MinhaSeris.Application\MinhaSeries.Application.csproj", "{AC09AABC-D25E-405B-9C17-5462EB3362F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinhaSeries.UnitTests", "MinhaSeries.UnitTests\MinhaSeries.UnitTests.csproj", "{B8A2E95B-5C53-4A00-A3BD-69671B596F4C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{AC09AABC-D25E-405B-9C17-5462EB3362F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC09AABC-D25E-405B-9C17-5462EB3362F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC09AABC-D25E-405B-9C17-5462EB3362F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8A2E95B-5C53-4A00-A3BD-69671B596F4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8A2E95B-5C53-4A00-A3BD-69671B596F4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8A2E95B-5C53-4A00-A3BD-69671B596F4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8A2E95B-5C53-4A00-A3BD-69671B596F4C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

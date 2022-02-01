@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MinhaSeries.Application.ViewModels
 {
-    class SerieViewModel
+    public class SerieViewModel
     {
         public SerieViewModel(int id, string title, string description, string year, Genre genre, DateTime addedAt)
         {
